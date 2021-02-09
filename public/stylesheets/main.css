@@ -1,0 +1,52 @@
+.img-thumbnail img {
+    width: 100%;
+}
+
+.img-thumbnail {
+    padding: 0;
+}
+
+.img-thumbnail .caption-full {
+    padding: 9px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.inline {
+    display: inline;
+}
+
+#boyut {
+    height: 200px;
+    width: 200px;
+}
+
+#del {
+    display: inline;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.renk {
+    background-color: #a9e88e;
+    color: #000;
+}
+
+#space {
+    margin-bottom: 9px;
+}
+
+#alan {
+    margin-top: 9px;
+}
+
+#resim {
+    background-image: url(https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    
+    background-position: bottom;
+}

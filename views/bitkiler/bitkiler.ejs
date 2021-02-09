@@ -1,0 +1,57 @@
+<% include ../partials/header %>
+
+<style>
+
+    
+    #renk {
+        background-color: #fff;
+    }
+</style>
+
+    <div id="resim" class="jumbotron">
+
+        <div class="container text-center">
+           <h1 class="display-4">Bitki Çeşitleri</h1>
+           <h5 class="display-6">Yeni Bitkiler Eklemek İçin</h5>
+           <a href="/bitkiler/yeni" class="renk btn btn-lg">Tıklayınız</a>
+        </div>
+    </div>
+
+        <div class="container">
+    <div class="row text-center" style="display:flex; flex:wrap;">
+        <div class="col-md-12">
+                <% if(noMatch !== null) { %>
+                    <h3><%= noMatch %></h3>
+                    <div style="width: 30%; margin: 25px auto;">
+                    <p>
+                      <form action="/bitkiler" method="GET" class="form-inline">
+                        <div class="form-group">
+                          <input type="text" name="search" placeholder="Bitki Ara" class="form-control">
+                          <input type="submit" value="Ara" class="btn btn-outline-success ml-1">
+                        </div>
+                      </form>
+                    </p>
+                  </div>
+                <% } %>
+            </div>
+        <% bitkis.forEach(function(bit){ %>
+           <div class="col-md-3 col-sm-6">
+                <div id="renk" class="img-thumbnail border-0 mb-4">
+                   <img id="boyut" src="<%= bit.resim %>">
+                   <div class="caption">
+                       <h3><%= bit.isim %></h3>
+                   </div>
+                   <p>
+                       <a href="/bitkiler/<%= bit._id %>" id="space" class="renk btn">Daha Fazla Bilgi</a>
+                   </p>
+               </div>
+           </div>
+        <% }); %>
+            
+        
+    </div>
+</div>
+    
+
+
+<% include ../partials/footer %>
